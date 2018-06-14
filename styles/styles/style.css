@@ -33,6 +33,10 @@
   line-height: normal;
 }
 
+.bgdedoverlaylight {
+  background-image: url('images/demo/backgrounds/01.png');
+}
+
 /* Header --------------------------------------------------------------------------------------------------------------- */
 
 #header {
