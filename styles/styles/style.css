@@ -2,6 +2,64 @@
 @import url('font-awesome.min.css');
 @import url('framework.css');
 
+/* Burger Menu --------------------------------------------------------------------------------------------------------------- */
+
+.container {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-5px, 5px);
+  background-color: black;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+  background-color: black;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: black;
+}
+
+.change {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.change:hover {
+  cursor: pointer;
+}
+
+.mobilenav {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background: white;
+}
+
+.mobilenav--isactive {
+  display: block;
+}
 /* Top Bar --------------------------------------------------------------------------------------------------------------- */
 
 #topbar {
@@ -40,6 +98,10 @@
 /* Header --------------------------------------------------------------------------------------------------------------- */
 
 #header {
+}
+
+.header--hiden {
+  transform: translate(-100%);
 }
 
 #header #logo {
@@ -763,6 +825,10 @@ td {
   list-style: none;
 }
 
+.imgsvg {
+  height: 10px;
+}
+
 .faico li {
   display: inline-block;
   margin: 8px 5px 0 0;
@@ -910,7 +976,8 @@ textarea:focus,
 
 .row2 {
   color: #ffffff;
-  background-color: #222222;
+
+  background-image: url('images/demo/backgrounds/03.png');
 }
 
 .row3 {
